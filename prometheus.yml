@@ -1,0 +1,8 @@
+global:
+  scrape_interval: 15s
+
+scrape_configs:
+- job_name: discord
+  static_configs:
+  - targets: 
+    - '<ip address here>:9100'

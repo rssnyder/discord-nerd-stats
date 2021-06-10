@@ -1,0 +1,33 @@
+---
+    version: "3"
+    services:
+    
+      grafana:
+        image: grafana/grafana
+        container_name: grafana
+        ports:
+          - 3000:3000
+        restart: unless-stopped
+        volumes:
+          - grafana:/var/lib/grafana
+    
+      prometheus:
+        image: prom/prometheus
+        container_name: prometheus
+        volumes:
+          - "${PWD}/prometheus.yml:/etc/prometheus/prometheus.yml"
+        ports:
+          - 9090:9090
+        restart: unless-stopped
+    
+      promcord:
+        image: "biospheere/promcord"
+        restart: always
+        container_name: "promcord"
+        ports:
+          - 8787:8080
+        environment:
+          - DISCORD_TOKEN= # INSERT TOKEN HERE
+
+volumes:
+    grafana:
