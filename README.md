@@ -2,6 +2,8 @@
 
 Docker compose resources for standing up a discord monitoring stack
 
+![DiscordNerdStats](https://user-images.githubusercontent.com/7338312/121602902-98b02b80-ca0d-11eb-8740-6a98d6e5ff8e.png)
+
 [promcord](https://github.com/nimarion/promcord) + [prometheus](https://prometheus.io/) + [grafana](https://grafana.com/) = :heart:
 
 ## Self hosting
